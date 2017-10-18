@@ -70,9 +70,10 @@ RUN cd /usr/src \
  && ./install -n \
  && fwconsole chown \
  && fwconsole ma upgradeall \
- && fwconsole ma downloadinstall announcement backup bulkhandler fax ringgroups timeconditions \
+ && fwconsole ma downloadinstall announcement backup bulkhandler fax ringgroups timeconditions manager ivr queues parking findmefollow languages \
  && /etc/init.d/mysql stop \
  && rm -rf /usr/src/freepbx*
+
 
 RUN a2enmod rewrite
 
