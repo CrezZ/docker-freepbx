@@ -83,3 +83,7 @@ RUN chmod +x /run/*
 VOLUME /backup/
 
 CMD /run/start.sh
+
+RUN sed -i 's/bind-address/#bind-address/g' /etc/mysql/my.cnf
+
+EXPOSE 80/tcp 3306/tcp 5038/tcp 5060/udp 5060/tcp 5160/udp 5160/tcp
