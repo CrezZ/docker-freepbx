@@ -27,9 +27,9 @@ RUN cd /usr/src \
  && rm -r /usr/src/jansson*
 
 RUN cd /usr/src \
- && wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz \
- && tar xfz asterisk-13-current.tar.gz \
- && rm -f asterisk-13-current.tar.gz \
+ && wget http://downloads.asterisk.org/pub/telephony/certified-asterisk/asterisk-certified-13-current.tar.gz \
+ && tar xfz asterisk-*.tar.gz \
+ && rm -f asterisk-*.tar.gz \
  && cd asterisk-* \
  && contrib/scripts/install_prereq install \
  && ./configure --with-pjproject-bundled \
